@@ -1,33 +1,27 @@
 package com.Controller;
 
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayInputStream;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
+
 import java.util.ArrayList;
-import java.util.Base64;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
-import javax.security.auth.login.AccountException;
+
+
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.swing.plaf.FileChooserUI;
 
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,10 +31,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.codoid.products.fillo.Connection;
-import com.codoid.products.fillo.Fillo;
-import com.codoid.products.fillo.Recordset;
-import com.codoid.products.utils.FilenameUtils;
+
 import com.sforce.async.BatchInfo;
 import com.sforce.async.BatchStateEnum;
 import com.sforce.async.BulkConnection;
@@ -48,27 +39,25 @@ import com.sforce.async.CSVReader;
 import com.sforce.async.ConcurrencyMode;
 import com.sforce.async.ContentType;
 import com.sforce.async.JobInfo;
-import com.sforce.async.JobStateEnum;
+
 import com.sforce.async.OperationEnum;
-import com.sforce.async.QueryResultList;
-import com.sforce.bulk.UpdateResult;
+
+
 import com.sforce.soap.partner.DescribeGlobalResult;
 import com.sforce.soap.partner.DescribeGlobalSObjectResult;
 import com.sforce.soap.partner.DescribeSObjectResult;
-import com.sforce.soap.partner.DuplicateResult;
-import com.sforce.soap.partner.DuplicateRuleHeader_element;
+
 import com.sforce.soap.partner.Field;
 import com.sforce.soap.partner.GetUserInfoResult;
 import com.sforce.soap.partner.LoginResult;
 import com.sforce.soap.partner.PartnerConnection;
-import com.sforce.soap.partner.SaveResult;
-import com.sforce.soap.partner.sobject.SObject;
+
 import com.sforce.soap.tooling.CodeCoverageResult;
 import com.sforce.soap.tooling.RunTestsRequest;
 import com.sforce.soap.tooling.RunTestsResult;
 import com.sforce.soap.tooling.ToolingConnection;
 import com.sforce.soap.tooling.sobject.ApexTrigger;
-import com.sforce.soap.tooling.sobject.CustomObject;
+
 import com.sforce.soap.tooling.sobject.ValidationRule;
 import com.sforce.soap.tooling.sobject.WorkflowRule;
 import com.sforce.ws.ConnectionException;
