@@ -130,6 +130,13 @@
     <artifactId>force-partner-api</artifactId>
     <version>45.1.0</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.force.api/force-wsc -->
+<dependency>
+    <groupId>com.force.api</groupId>
+    <artifactId>force-wsc</artifactId>
+    <version>45.1.0</version>
+</dependency>
+
 <dependency>
     <groupId>tooling</groupId>
     <artifactId>tooling</artifactId>
